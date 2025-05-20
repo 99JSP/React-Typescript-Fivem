@@ -1,24 +1,22 @@
 fx_version 'cerulean'
-games { 'gta5' }
+game 'gta5'
+ui_page 'production/html/index.html'
 
-author 'JSP'
-description ''
-version '1.0.0'
-
-lua54 'yes'
+shared_scripts {
+	'production/config.js',
+	'production/shared/shared.js'
+}
 
 server_scripts {
-    'build/server/*.js'
+	'production/server/server.js'
 }
 
 client_scripts {
-    'build/client/*.js'
+	'production/client/client.js'
 }
-
-ui_page 'build/web/index.html'
 
 files {
-    'build/web/index.html',
-    'build/web/js/index.js',
-    'build/web/styles/index.css'
-}
+		"production/html/**/*.html", 
+		"production/html/**/*.js", 
+		"production/html/**/*.css" 
+	}
